@@ -60,10 +60,10 @@ void mqtt_init(esp_mqtt_client_config_t mqtt_cfg, mqtt_data_callback_t cb)
     esp_mqtt_client_start(mqtt_client);
 }
 
-void mqtt_publish(const char *topic, const char *data)
+void mqtt_publish(const char *topic, const char *data, int len, int qos, int retain)
 {
     if (mqtt_client)
     {
-        esp_mqtt_client_publish(mqtt_client, topic, data, 0, 1, 0);
+        esp_mqtt_client_publish(mqtt_client, topic, data, len, qos, retain);
     }
 }

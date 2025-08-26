@@ -87,7 +87,7 @@ void app_loop(void)
     if (mqtt_client != NULL)
     {
         const char *msg = (counter % 2) ? "LED=ON" : "LED=OFF";
-        esp_mqtt_client_publish(mqtt_client, "esp32/status", msg, 0, 1, 0);
+        mqtt_publish("esp32/status", msg, 0, 1, 0);
     }
 
     vTaskDelay(pdMS_TO_TICKS(2000));
