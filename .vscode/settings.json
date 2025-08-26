@@ -1,0 +1,17 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.port": "/dev/ttyUSB0",
+  "files.associations": {
+    "freertos.h": "c",
+    "gpio.h": "c",
+    "task.h": "c",
+    "event_groups.h": "c",
+    "stdio.h": "c",
+    "esp_netif.h": "c",
+    "esp_wifi.h": "c",
+    "esp_event.h": "c",
+    "wifi.h": "c",
+    "nvs_flash.h": "c",
+    "esp_log.h": "c"
+  }
+}
