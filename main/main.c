@@ -76,10 +76,10 @@ void app_init(void)
     mqtt_init(mqtt_cfg, my_mqtt_handler);
 }
 
-static int counter = 0;
-
 void app_loop(void)
 {
+    static int counter = 0;
+
     ESP_LOGI(MAIN_TAG, "LED TOGGLE");
     gpio_set_level(LED_PIN, counter % 2);
     counter++;
